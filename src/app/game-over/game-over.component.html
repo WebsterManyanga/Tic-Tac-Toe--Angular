@@ -13,4 +13,11 @@
   <p class="text-white text-5xl text-center mt-10" *ngIf="winner === 0">
     DRAW!
   </p>
+
+  <a
+    routerLink="/"
+    class="bg-white rounded-xl shadow-2xl px-12 py-2 text-3xl block mt-10 mx-auto w-1/2 text-center"
+    (click)="resetGame()"
+    >RESTART</a
+  >
 </section>
