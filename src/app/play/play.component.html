@@ -1,12 +1,14 @@
-<section *ngIf="!gameService.gameover">
-  <img src="../../assets/Logo.png" alt="logo" class="w-1/3 mt-3 ml-3" />
+<section *ngIf="!gameService.gameover" class="relative flex justify-center items-center">
+  <div class="w-32 absolute left-6 top-6 lg:w-36">
+    <img src="../../assets/Logo.png" alt="logo" class="w-full"/>
+  </div>
   <div
-    class="grid grid-rows-3 gap-5 bg-white p-6 mt-[20vh] w-4/5 mx-auto border-4 shadow-2xl border-black"
+    class="grid grid-rows-3  justify-center bg-white p-6 mt-[20vh] w-[350px] h-[350px] lg:w-[500px] lg:h-[500px]  mx-auto border-4 shadow-2xl border-black"
   >
-    <ul *ngFor="let row of gameBoard; index as x" class="grid grid-cols-3">
+    <ul *ngFor="let row of gameBoard; index as x" class="grid grid-cols-3 gap-6 lg:gap-18">
       <li
         *ngFor="let column of row; index as y"
-        class="bg-[#3d7ad6] w-20 h-20 text-white text-2xl"
+        class="bg-[#3d7ad6] w-20  h-20 lg:w-28 lg:h-28  text-white text-2xl"
         (click)="played(x, y)"
       >
         <img src="../../assets/x.png" alt="x" *ngIf="column === 1" class="w-5/6">
